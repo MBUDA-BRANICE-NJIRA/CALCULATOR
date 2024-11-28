@@ -19,10 +19,10 @@
 
      <!-------FIRST ROW BUTTON=====-->
                 <div>
-                    <input type="button" value="AC">
-                    <input type="button" value="DE">
-                    <input type="button" value=".">
-                    <input type="button" value="/">
+                    <input type="button" value="AC" onclick="display.value = '' ">
+                    <input type="button" value="DE" onclick="display.value = display.value.toString().slice(0,-1) ">
+                    <input type="button" value="." onclick="display.value += '.' ">
+                    <input type="button" value="/" onclick="display.value += '/' ">
                 </div>
 
                 <div>
@@ -49,7 +49,7 @@
                 <div>
                     <input type="button" value="00" onclick="display.value += '00' ">
                     <input type="button" value="0" onclick="display.value += '0' ">
-                    <input type="button" value="=" class="equal" onclick="display.value += '=' ">
+                    <input type="button" value="=" class="equal" onclick="display.value = eval(display.value)">
                 </div>
             </form>
 
